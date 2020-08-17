@@ -18,7 +18,7 @@ Blockly.Python['neopixel_set_color1'] = function(block) {
   var green = parseInt(result[2], 16);
   var blue = parseInt(result[3], 16);
 
-  var code = `np[${value_n}] = (${red}, ${green}, ${blue})\n`;
+  var code = `np[${value_n}] = (${red} * np.bright / 100, ${green} * np.bright / 100, ${blue} * np.bright / 100)\n`;
   return code;
 };
 
@@ -54,13 +54,13 @@ Blockly.Python['neopixel_rainbow'] = function(block) {
     '    for i in range(np.n):',
     '      WheelPos = (i * 1 + j) & 255',
     '      if WheelPos < 85:',
-    '        np[i] = (WheelPos * 3, 255 - WheelPos * 3, 0)',
+    '        np[i] = (WheelPos * 3 * np.bright / 100, 255 - WheelPos * 3 * np.bright / 100, 0)',
     '      elif WheelPos < 170:',
     '        WheelPos -= 85',
-    '        np[i] = (255 - WheelPos * 3, 0, WheelPos * 3)',
+    '        np[i] = (255 - WheelPos * 3 * np.bright / 100, 0, WheelPos * 3 * np.bright / 100)',
     '      else:',
     '        WheelPos -= 170',
-    '        np[i] = (0, WheelPos * 3, 255 - WheelPos * 3)',
+    '        np[i] = (0, WheelPos * 3 * np.bright / 100, 255 - WheelPos * 3 * np.bright / 100)',
     '    sleep_ms(wait)']);
 
   var code = `${functionName}(${value_wait})\n`;
