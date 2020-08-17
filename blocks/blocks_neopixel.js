@@ -77,7 +77,7 @@ Blockly.defineBlocksWithJsonArray(
 },
 {
   "type": "neopixel_fill_color1",
-  "message0": "NeoPixel fill color %2",
+  "message0": "NeoPixel fill color %1",
   "args0": [
     {
       "type": "field_colour",
@@ -94,7 +94,7 @@ Blockly.defineBlocksWithJsonArray(
 },
 {
   "type": "neopixel_fill_color2",
-  "message0": "NeoPixel fill color Red: %2 Green: %3 Blue: %4",
+  "message0": "NeoPixel fill color Red: %1 Green: %2 Blue: %3",
   "args0": [
     {
       "type": "input_value",
