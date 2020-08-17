@@ -8,7 +8,7 @@
                 <block type="neopixel_setup">
                     <value name="pin">
                         <shadow type="math_number">
-                            <field name="NUM">0</field>
+                            <field name="NUM">27</field>
                         </shadow>
                     </value>
                     <value name="length">
