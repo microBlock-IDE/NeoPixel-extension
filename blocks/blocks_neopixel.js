@@ -76,6 +76,50 @@ Blockly.defineBlocksWithJsonArray(
   "helpUrl": ""
 },
 {
+  "type": "neopixel_fill_color1",
+  "message0": "NeoPixel fill color %2",
+  "args0": [
+    {
+      "type": "field_colour",
+      "name": "color",
+      "colour": "#ff0000"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": "#27AE60",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "neopixel_fill_color2",
+  "message0": "NeoPixel fill color Red: %2 Green: %3 Blue: %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "red",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "green",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "blue",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": "#27AE60",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
   "type": "neopixel_show",
   "message0": "NeoPixel show",
   "inputsInline": true,

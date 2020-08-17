@@ -32,13 +32,34 @@ Blockly.Python['neopixel_set_color2'] = function(block) {
   return code;
 };
 
+Blockly.Python['neopixel_fill_color1'] = function(block) {
+  var colour_color = block.getFieldValue('color');
+
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(colour_color);
+  var red = parseInt(result[1], 16);
+  var green = parseInt(result[2], 16);
+  var blue = parseInt(result[3], 16);
+
+  var code = `for i in range(np.n): np[i] = (int(${red} * np.bright / 100), int(${green} * np.bright / 100), int(${blue} * np.bright / 100))\n`;
+  return code;
+};
+
+Blockly.Python['neopixel_fill_color2'] = function(block) {
+  var value_red = Blockly.Python.valueToCode(block, 'red', Blockly.Python.ORDER_ATOMIC);
+  var value_green = Blockly.Python.valueToCode(block, 'green', Blockly.Python.ORDER_ATOMIC);
+  var value_blue = Blockly.Python.valueToCode(block, 'blue', Blockly.Python.ORDER_ATOMIC);
+
+  var code = `for i in range(np.n): np[i] = (int(${value_red} * np.bright / 100), int(${value_green} * np.bright / 100), int(${value_blue} * np.bright / 100))\n`;
+  return code;
+};
+
 Blockly.Python['neopixel_show'] = function(block) {
   var code = 'np.write()\n';
   return code;
 };
 
 Blockly.Python['neopixel_clear'] = function(block) {
-  var code = 'for x in range(np.n): np[x] = (0, 0, 0)\n';
+  var code = 'for i in range(np.n): np[i] = (0, 0, 0)\n';
   return code;
 };
 
