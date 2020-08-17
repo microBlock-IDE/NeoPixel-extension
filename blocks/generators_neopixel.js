@@ -61,9 +61,10 @@ Blockly.Python['neopixel_rainbow'] = function(block) {
     '      else:',
     '        WheelPos -= 170',
     '        np[i] = (0, int((WheelPos * 3) * np.bright / 100), int((255 - WheelPos * 3) * np.bright / 100))',
+    '    np.write()',
     '    sleep_ms(wait)']);
 
-  var code = `${functionName}(${value_wait})\n`;
+  var code = `${functionName}(np, ${value_wait})\n`;
   return code;
 };
 
