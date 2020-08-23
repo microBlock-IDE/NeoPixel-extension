@@ -1,8 +1,8 @@
 ({
     name: "NeoPixel", // Category Name
-    description: "Device Control",
+    description: "Write light to NeoPixel",
     author: "microBlock",
-    category: "Communication",
+    category: "Device Control",
     version: "1.0.0",
     icon: "/static/icon.png", // Category icon
     color: "#27AE60", // Category color (recommend some blocks color)
